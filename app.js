@@ -1,8 +1,8 @@
 const button = document.getElementById("btn")
 const body = document.querySelector("body")
 const code = document.querySelector("#code")
-const copy = document.querySelector("#img")
-
+const img = document.querySelector("#img")
+const history = []
 
 button.addEventListener("click" ,()=> {
 
@@ -11,10 +11,19 @@ button.addEventListener("click" ,()=> {
     let changeCss = body.style.backgroundColor = `#${bgColor}`
     // console.log(a);
     
-
+    
     code.textContent = changeCss
 
-})
+    img.addEventListener("click" , () => {
+        navigator.  clipboard.writeText(changeCss)
+        
+    })
+
+    
+    })
+    
+
+
 
 button.addEventListener("click" ,()=> {
 
